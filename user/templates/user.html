@@ -10,6 +10,20 @@
 
     <h1>Hello World!</h1>
     <p>Welcome to my first Django project!</p>
+    <table border='1'>
+        <tr>
+          <th>ID</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+        </tr>
+        {% for x in users %}
+          <tr>
+            <td>{{ x.id }}</td>
+              <td>{{ x.firstName }}</td>
+            <td>{{ x.lastName }}</td>
+          </tr>
+        {% endfor %}
+      </table>
 </body>
 
 </html>

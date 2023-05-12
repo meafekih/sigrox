@@ -9,9 +9,9 @@ python3 manage.py runserver
 python3 manage.py startapp user
 python3 manage.py migrate // after new app,
 python3 manage.py makemigrations user
-python3 manage.py sqlmigrate user 0001
+python3 manage.py sqlmigrate user 0002
 python3 manage.py shell // commande sql
-python3 manage.py makemigrations user & python3 manage.py migrate user
+python3 manage.py makemigrations & python3 manage.py migrate
 
 
 
