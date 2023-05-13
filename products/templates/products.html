@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Products</title>
-</head>
-<body>
-    {% for p in all_products %}
-        <li><a href="details/{{ p.id }}">{{ p.name }} </a>  Price: {{ p.price }} </li>
-        {% endfor %}
+{% extends "master.html"%}
 
-</body>
-</html>
+
+{% block title %}
+    All Products
+{% endblock %}
+
+{% block content %}
+    <p><a href="/">HOME</a></p>
+    {% for p in all_products %}
+        <li><a href="details/{{ p.id }}">{{ p.name }} </a> Price: {{ p.price }} </li>
+    {% endfor %}
+{% endblock %}

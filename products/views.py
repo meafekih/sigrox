@@ -15,6 +15,9 @@ def details(request, id):
     context={'product':data}
     return HttpResponse(temp.render(context, request))
 
+def main(request):
+    temp = loader.get_template('main.html')
+    return HttpResponse(temp.render())
 
 
     

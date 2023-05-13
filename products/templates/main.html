@@ -1,0 +1,26 @@
+{% extends "master.html"%}
+
+
+{% block title %}
+    SIGROX
+{% endblock %}
+
+
+
+{% block content %}
+
+    {% with firstname="fekih" lastname="amine" display=1 %}
+        
+
+        {% if display == 1 %}
+            <h1>Hello {{ firstname }} {{ lastname }}</h1>
+        {% else %}
+            <h1>Bye</h1>
+        {% endif %}
+
+    {% endwith %}
+
+    <h1> SIGROX</h1>
+    <h2>Products</h2>
+    <h3><a href="/products">Chack All products hier</a></h3>
+{% endblock %}

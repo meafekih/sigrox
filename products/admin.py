@@ -1,4 +1,8 @@
 from django.contrib import admin
 from .models import products
 
-admin.site.register(products)
+
+class membersAdmin(admin.ModelAdmin):
+    list_display = ("name", "price")
+
+admin.site.register(products, membersAdmin)
