@@ -5,12 +5,10 @@
     SIGROX
 {% endblock %}
 
-Louay
+
 {% block content %}
 
     {% with firstname="fekih" lastname="amine" display=1 %}
-        
-
         {% if display == 1 %}
             <h1>Hello {{ firstname }} {{ lastname }}</h1>
         {% else %}
@@ -18,8 +16,20 @@ Louay
         {% endif %}
 
     {% endwith %}
-
     <h1> SIGROX</h1>
     <h2>Products</h2>
+
+    {% if data %}
+    {% for d in data %}
+        <li>{{ d.name}} : {{d.version}}</li>
+        {% endfor %}
+    {% endif %}
+
+
+
+
+
+
+
     <h3><a href="/products">Chack All products hier</a></h3>
 {% endblock %}

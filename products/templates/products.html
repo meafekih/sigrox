@@ -8,6 +8,7 @@
 {% block content %}
     <p><a href="/">HOME</a></p>
     {% for p in all_products %}
-        <li><a href="details/{{ p.id }}">{{ p.name }} </a> Price: {{ p.price }} </li>
+        <h2><li><a href="details/{{ p.id }}">{{ p.name }} </a> 
+            Price: {{ p.price }} </li></h2>
     {% endfor %}
 {% endblock %}
