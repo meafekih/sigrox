@@ -1,13 +1,10 @@
-{% extends "master.html"%}
-
-
-{% block title %}
-Details
-{% endblock %}
-
+{% extends "master.html"%} {% block title %} Details 
+{% endblock %} 
 {% block content %}
-    <p><a href="/">HOME</a></p>
-    <h2> Details of product </h2>
-    <h3>Name : {{ product.name }} :: Price: {{ product.price }} </h3>
+
+<div class="mycard">
+    <h3>Name : {{ product.name }} :: Price: {{ product.price }}</h3>
     <h5><a href="/products">Show all products </a></h5>
+  </div>
+
 {% endblock %}

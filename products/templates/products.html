@@ -1,14 +1,18 @@
 {% extends "master.html"%}
 
+ {% block title %} All Products {% endblock %} 
+ {%block content %}
 
-{% block title %}
-    All Products
-{% endblock %}
-
-{% block content %}
-    <p><a href="/">HOME</a></p>
-    {% for p in all_products %}
-        <h2><li><a href="details/{{ p.id }}">{{ p.name }} </a> 
-            Price: {{ p.price }} </li></h2>
-    {% endfor %}
+ <div class="mycard">
+    <h1>Members</h1>
+    <ul>
+      {% for x in all_products %}
+      <li onclick="window.location = 'details/{{ x.id }}'">
+        {{ x.name }} {{ x.price }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  
+  
 {% endblock %}
